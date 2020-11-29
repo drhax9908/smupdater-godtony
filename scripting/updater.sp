@@ -1,5 +1,4 @@
 #pragma semicolon 1
-#pragma newdecls required
 
 /* SM Includes */
 #include <sourcemod>
