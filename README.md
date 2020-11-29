@@ -3,4 +3,5 @@
 
 ## Why is this here?
 Bitbucket has discontinued support for Mercurial repositories, making the [original repository](https://bitbucket.org/GoD_Tony/updater/) and its contents unavailable.
-(We currently support this updater plugin in SourceBans++ and need a reliable way to fetch the updater.inc include to fully compile SourceBans++.
+I have added these files in an attempt to release minor changes to the plugin to keep it somewhat functional.
+Releases will happen when I have the time. Don't expect miracles with the plugin.
