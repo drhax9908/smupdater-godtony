@@ -40,12 +40,12 @@ public void OnSteamHTTPComplete(HTTPRequestHandle HTTPRequest, bool requestSucce
 /* Keep track of SteamTools load state. */
 bool g_bSteamLoaded;
 
-public void Steam_FullyLoaded()
+public int Steam_FullyLoaded()
 {
 	g_bSteamLoaded = true;
 }
 
-public void Steam_Shutdown()
+public int Steam_Shutdown()
 {
 	g_bSteamLoaded = false;
 }
