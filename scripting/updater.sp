@@ -11,7 +11,7 @@
 
 /* Plugin Info */
 #define PLUGIN_NAME 		"Updater"
-#define PLUGIN_VERSION 		"1.2.2"
+#define PLUGIN_VERSION 		"1.2.3"
 
 public Plugin myinfo =
 {
@@ -34,7 +34,9 @@ public Plugin myinfo =
 #define TEMP_FILE_EXT		"temp"		// All files are downloaded with this extension first.
 #define MAX_URL_LENGTH		256
 
-#define UPDATE_URL			"http://godtony.mooo.com/updater/updater.txt"
+// disabled the god tony update url as it is down, and I do not wish to provide one of my own yet
+
+//#define UPDATE_URL			"http://godtony.mooo.com/updater/updater.txt"
 
 enum UpdateStatus {
 	Status_Idle,		
@@ -128,10 +130,12 @@ public void OnPluginStart()
 	// Temp path for checking update files.
 	BuildPath(Path_SM, _sDataPath, sizeof(_sDataPath), "data/updater.txt");
 	
-#if !defined DEBUG
+// disabled the god tony update url as it is down, and I do not wish to provide one of my own yet
+
+//#if !defined DEBUG
 	// Add this plugin to the autoupdater.
-	Updater_AddPlugin(GetMyHandle(), UPDATE_URL);
-#endif
+	//Updater_AddPlugin(GetMyHandle(), UPDATE_URL);
+//#endif
 
 	// Check for updates every 24 hours.
 	_hUpdateTimer = CreateTimer(86400.0, Timer_CheckUpdates, _, TIMER_REPEAT);
